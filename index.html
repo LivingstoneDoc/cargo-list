@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cargo list</title>
+    <link rel="stylesheet" href="./style.scss">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Отслеживание грузов</h1>
+            <button type="button" class="btn btn-primary add-cargo-btn">Добавить груз</button>
+        </header>
+        <div class="table-wrapper table-responsible">
+            <table class="table table-striped table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Номер груза</th>
+                    <th scope="col">Название груза</th>
+                    <th scope="col">Статус груза</th>
+                    <th scope="col">Пункт отправления</th>
+                    <th scope="col">Пункт назначения</th>
+                    <th scope="col">Дата отправления</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Строительные материалы</td>
+                    <td>
+                        <select class="form-select cargo-status" aria-label="cargo-status">
+                            <option value="on-way" selected>В пути</option>
+                            <option value="waitnig-sending">Ожидает отправки</option>
+                            <option value="delivered">Доставлено</option>
+                          </select>
+                    </td>
+                    <td>Москва</td>
+                    <td>Казань</td>
+                    <td>2024-11-24</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Хрупкий груз</td>
+                    <td>
+                        <select class="form-select cargo-status" aria-label="cargo-status">
+                            <option value="on-way">В пути</option>
+                            <option value="waitnig-sending" selected>Ожидает отправки</option>
+                            <option value="delivered">Доставлено</option>
+                        </select>
+                    </td>
+                    <td>Санкт-Петербург</td>
+                    <td>Екатеринбург</td>
+                    <td>2024-11-26</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+    
+    <script type="module" src="./index.js"></script>
+</body>
+</html>

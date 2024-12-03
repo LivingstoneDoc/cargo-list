@@ -1,0 +1,22 @@
+{
+  "name": "cargo-list",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.16.0",
+    "@parcel/transformer-sass": "^2.13.2",
+    "eslint": "^9.16.0",
+    "globals": "^15.13.0",
+    "parcel": "^2.13.2"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
+}
