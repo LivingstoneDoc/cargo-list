@@ -25,35 +25,23 @@
                     <th scope="col">Дата отправления</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Строительные материалы</td>
-                    <td>
-                        <select class="form-select cargo-status select" aria-label="cargo-status">
-                            <option value="on-way" selected>В пути</option>
+                <tbody class="table-body">
+                  <template id="cargoTemplate">
+                    <tr class="cargo-row">
+                      <th scope="row" class="cargo-id"></th>
+                      <td class="cargo-name"></td>
+                      <td>
+                          <select class="form-select cargo-status select" aria-label="cargo-status">
+                            <option value="on-way">В пути</option>
                             <option value="waitnig-sending">Ожидает отправки</option>
                             <option value="delivered">Доставлено</option>
                           </select>
-                    </td>
-                    <td>Москва</td>
-                    <td>Казань</td>
-                    <td>2024-11-24</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Хрупкий груз</td>
-                    <td>
-                        <select class="form-select cargo-status select" aria-label="cargo-status">
-                            <option value="on-way">В пути</option>
-                            <option value="waitnig-sending" selected>Ожидает отправки</option>
-                            <option value="delivered">Доставлено</option>
-                        </select>
-                    </td>
-                    <td>Санкт-Петербург</td>
-                    <td>Екатеринбург</td>
-                    <td>2024-11-26</td>
-                  </tr>
+                      </td>
+                      <td class="cargo-departure-point"></td>
+                      <td class="cargo-destination-point"></td>
+                      <td class="cargo-departure-date"></td>
+                    </tr>
+                    </template>
                 </tbody>
               </table>
         </div>
