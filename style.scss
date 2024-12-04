@@ -1,5 +1,3 @@
-@import "~bootstrap/scss/bootstrap";
-
 .container {
     padding: 5px;
 }
@@ -18,6 +16,25 @@
     border-bottom: 1px solid #000000;
 }
 
-.cargo-status {
+.select {
     cursor: pointer;
+}
+
+#add-cargo-modal {
+    border: none;
+}
+
+.add-cargo-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.add-cargo-form .cargo-name {
+    font-weight: bold;
+}
+
+.add-cargo-form .modal-subtitle {
+    margin-bottom: .5rem;
+    font-weight: bold;
 }
