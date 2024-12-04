@@ -10,13 +10,13 @@ let uiElements = {
   statusTemplate: document.querySelector('.statusTemplate')
 };
 
-async function getResponse() {
+async function getResponseList() {
   let response = await fetch('http://localhost:3000/cargoList');
   return await response.json();
 }
 
 async function getCargoData() {
-  let data = await getResponse();
+  let data = await getResponseList();
   return data;
 }
 
@@ -26,7 +26,10 @@ async function renderCargoList() {
     let cargoContent = uiElements.cargoTemplate.content.cloneNode(true);
     cargoContent.querySelector('.cargo-id').textContent = cargoItem.id;
     cargoContent.querySelector('.cargo-name').textContent = cargoItem.name;
-    // cargoContent.querySelector('.cargo-status').textContent = cargoItem.status; TODO statuses
+    let cargoSelectOptions = cargoContent.querySelectorAll('.cargo-status-option');
+    for (let item of cargoSelectOptions) {
+      item.textContent = cargoItem.status;
+    }
     cargoContent.querySelector('.cargo-departure-point').textContent = cargoItem.origin;
     cargoContent.querySelector('.cargo-destination-point').textContent = cargoItem.destination;
     cargoContent.querySelector('.cargo-departure-date').textContent = cargoItem.departureDate;
