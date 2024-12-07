@@ -16,5 +16,10 @@
       "destination": "Екатеринбург",
       "departureDate": "2024-11-26"
     }
-  ]
+  ],
+  "cargoStatuses": {
+    "wait": "Ожидает отправки",
+    "inWay": "В пути",
+    "delivered": "Доставлено"
+  }
 }
